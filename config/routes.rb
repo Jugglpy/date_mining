@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :places
+  resources :places, only: [:new, :create]
   resources :plans
 end
