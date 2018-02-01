@@ -12,28 +12,28 @@
 
 ActiveRecord::Schema.define(version: 20180201063210) do
 
-  create_table "orders", force: :cascade do |t|
+  create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "plan_id"
     t.integer  "place_id"
     t.integer  "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["place_id"], name: "index_orders_on_place_id"
-    t.index ["plan_id"], name: "index_orders_on_plan_id"
+    t.index ["place_id"], name: "index_orders_on_place_id", using: :btree
+    t.index ["plan_id"], name: "index_orders_on_plan_id", using: :btree
   end
 
-  create_table "places", force: :cascade do |t|
-    t.text     "name"
-    t.decimal  "latitude",   precision: 9, scale: 6
-    t.decimal  "longtitude", precision: 9, scale: 6
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+  create_table "places", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "name",       limit: 65535
+    t.decimal  "latitude",                 precision: 9, scale: 6
+    t.decimal  "longtitude",               precision: 9, scale: 6
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
   end
 
-  create_table "plans", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text     "name"
+  create_table "plans", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.text     "name",       limit: 65535
   end
 
 end
