@@ -1,9 +1,18 @@
 <div class="content">
+  <div class="plan_name">
+    <%= @plan.name %>
   <div class="places">
     <% @places.each do |place| %>
-      <div class="place_name">
-        <%= place.name %>
-
+      <div class="place">
+        <div class="place_name">
+          <%= place.name %>
+        </div>
+        <div class="place_photo">
+          ここに写真
+        </div>
+        <div class="place_comment">
+          ここにコメント
+        </div>
       </div>
     <% end %>
   </div>
