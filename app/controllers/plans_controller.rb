@@ -9,6 +9,11 @@ class PlansController < ApplicationController
     @plan.orders.build
   end
 
+  def show
+    @plan = Plan.find(params[:id])
+    @places = @plan.places
+  end
+
   def create
     @plan = Plan.new(plan_params)
     if @plan.save
