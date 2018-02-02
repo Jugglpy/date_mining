@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<div class="content">
+  <div class="places">
+    <% @places.each do |place| %>
+      <div class="place_name">
+        <%= place.name %>
 
-  </head>
-
-  <body>
-    <div class="content">
-      <div class="places">
-        <% @places.each do |place| %>
-          <div class="place_name">
-            <%= place.name %>
-
-          </div>
-        <% end %>
       </div>
-    </div>
-  </body>
-</html>
+    <% end %>
+  </div>
+</div>
