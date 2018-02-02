@@ -3,6 +3,10 @@ class PlansController < ApplicationController
     @plans = Plan.all
   end
 
+  def show
+    @plan = Plan.find_by(id: params[:id])
+  end
+
   def new
     @plan = Plan.new
     @plan.orders.build

@@ -1,5 +1,6 @@
-<% @plans.each do |plan| %>
-  <tr>
-    <td><%= plan.name %></td>
-  </tr>
+<h1>プラン一覧</h1>
+
+<%= @plans.each do |plan| %>
+  <p><%= plan.name %></p>
+  <p><%= link_to "プランへ", plan_path(plan) %></p>
 <% end %>
