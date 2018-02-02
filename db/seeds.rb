@@ -7,7 +7,6 @@
   Place.create(name: 'スカイツリー')
   Place.create(name: '東京タワー')
   Place.create(name: '浅草寺')
-  Place.create(name: "うんこ")
 
   5.times do |no|
     Order.create(plan_id: no, order: no, place_id: no)
