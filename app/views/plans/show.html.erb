@@ -11,7 +11,9 @@
           <%= place.explain %>
         </div>
         <div class="place_photo">
+        <%- if place.image %>
           <%= image_tag place.image %>
+        <% end %>
         </div>
         <div class="place_comment">
           彼女とめっちゃいい雰囲気になれました！！

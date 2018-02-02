@@ -1,6 +1,8 @@
 <h1>プラン一覧</h1>
+<p><%= link_to "プランを追加する", new_plan_path %></p>
 
 <%= @plans.each do |plan| %>
   <p><%= plan.name %></p>
   <p><%= link_to "プランへ", plan_path(plan) %></p>
 <% end %>
+
