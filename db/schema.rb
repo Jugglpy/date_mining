@@ -36,6 +36,9 @@ ActiveRecord::Schema.define(version: 20180202052629) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.text     "name",       limit: 65535
+    t.integer  "cost"
+    t.datetime "time"
+    t.text     "season",     limit: 65535
   end
 
 end
