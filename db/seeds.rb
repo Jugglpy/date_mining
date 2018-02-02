@@ -4,4 +4,6 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-  Plan.create(name: 'Luke')
+  Place.create(name: 'スカイツリー')
+  Place.create(name: '東京タワー')
+  Place.create(name: '浅草寺')

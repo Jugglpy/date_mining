@@ -1,0 +1,12 @@
+<%= form_for @plan do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.fields_for :orders do |p| %>
+      <%= p.label :plan_order_id %>
+      <%= p.collection_select :place_id, Place.all, :id, :name %>
+      <%= p.hidden_field :order, :value => p.index+1 %>
+    <% end %>
+    <%= f.submit "Post!!!" %>
+  </p>
+<% end %>
