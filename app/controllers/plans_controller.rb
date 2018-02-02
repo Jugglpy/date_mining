@@ -1,5 +1,6 @@
 class PlansController < ApplicationController
   def index
+    @plans = Plan.all
   end
 
   def new
@@ -24,6 +25,6 @@ class PlansController < ApplicationController
 
   private
     def plan_params
-      params.require(:plan).permit(:name, :cost, orders_attributes: [:plan_id, :name, :place_id, :order])
+      params.require(:plan).permit(:name, :cost, :time, :season, orders_attributes: [:plan_id, :name, :place_id, :order])
     end
 end
