@@ -1,6 +1,17 @@
 <div class="content">
   <div class="plan_name">
     <%= @plan.name %>
+  <p class="sub">
+    費用:
+    <%= @plan.cost %>
+    万円
+    <br>
+    行った日にち:
+    <%= @plan.time.to_date %>
+    <br>
+    行った時期:
+    <%= @plan.season %>
+  </p>
   <div class="places">
     <% @places.each do |place| %>
       <div class="place">
