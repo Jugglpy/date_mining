@@ -10,7 +10,6 @@ body, html {
 
 .content{
   width: 70%;
-  height: 100%;
   margin: 0 auto;
   background-color: #eeeeee;
   font-size: 40px;
@@ -37,6 +36,14 @@ body, html {
       }
       .place_comment{
 
+      }
+      .sankaku{
+        width: 0;
+        height: 0;
+        border-top: 30px solid #f00;
+        border-right: 80px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 80px solid transparent;
       }
     }
   }
